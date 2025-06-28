@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="container relative z-10">
         <div className="max-w-3xl text-center mx-auto">
           <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white leading-tight lg:text-6xl mb-4 hover:animate-bobble transition-all duration-500 transform hover:scale-105 cursor-pointer">
-            Empowering Digital Innovation for Your Business
+            Fmpowering Digital Innovation for Your Business
           </h1>
           <p className="mt-4 text-xl text-white opacity-90 hover:opacity-100 transition-opacity duration-300">
             From cutting-edge web and mobile app development to strategic data analytics, CoreTech Solutions equips your business with scalable, efficient, and future-ready digital solutions.
