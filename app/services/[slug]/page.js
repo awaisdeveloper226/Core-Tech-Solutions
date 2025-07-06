@@ -27,8 +27,8 @@ const serviceData = {
       "Scalability baked in from the start.",
     ],
     cta: "Let's build your app today!",
-    price: "Starting from $15,000",
-    deliveryTime: "8-12 weeks",
+    price: "Starting from $800",
+    deliveryTime: "3-4 weeks",
     clientsServed: "50+",
     rating: "4.9",
     features: [
@@ -63,8 +63,8 @@ const serviceData = {
       "Accessibility and mobile-first design.",
     ],
     cta: "Start your digital transformation with us!",
-    price: "Starting from $8,000",
-    deliveryTime: "4-8 weeks",
+    price: "Starting from $400",
+    deliveryTime: "1-2 weeks",
     clientsServed: "100+",
     rating: "4.8",
     features: [
@@ -98,8 +98,8 @@ const serviceData = {
     "Link-building and authority development.",
   ],
   cta: "Boost your visibility with expert SEO.",
-  price: "Starting from $6,000",
-  deliveryTime: "4-8 weeks",
+  price: "Starting from $500",
+  deliveryTime: "2-3 weeks",
   clientsServed: "100+",
   rating: "4.8",
   features: [
@@ -196,7 +196,7 @@ export default function ServiceDetails({ params }) {
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => router.push("/contact")}
+                  onClick={() => router.push("/#contact")}
                   className="group relative overflow-hidden px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2 font-semibold">
