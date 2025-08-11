@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function BlogSection() {
   const blogs = [
     {
@@ -36,37 +40,49 @@ export default function BlogSection() {
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28" id="blog">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900">Latest from Our Blog</h2>
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-extrabold tracking-tight text-gray-900">
+          Latest from Our Blog
+        </h2>
         <p className="mt-4 text-lg text-gray-600">
           Insights to help you understand, grow, and succeed in the digital world.
         </p>
       </div>
 
-      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+      <div className="grid gap-10 md:grid-cols-2">
         {blogs.map((blog, index) => (
-          <div
+          <motion.div
             key={index}
-            className="rounded-2xl overflow-hidden shadow-xl bg-white hover:shadow-2xl transition-shadow duration-300"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-shadow duration-500"
           >
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-56 object-cover"
-            />
+            <div className="relative overflow-hidden">
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
             <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                 {blog.title}
               </h3>
-              <p className="text-gray-600 mb-4">{blog.summary}</p>
+              <p className="text-gray-600 mt-3 mb-5">{blog.summary}</p>
               <a
                 href={blog.link}
-                className="text-blue-600 hover:underline font-medium"
+                className="inline-flex items-center text-blue-600 font-medium group-hover:gap-2 transition-all duration-300"
               >
-                Read More →
+                Read More
+                <span className="transform group-hover:translate-x-1 transition-transform duration-300">
+                  →
+                </span>
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

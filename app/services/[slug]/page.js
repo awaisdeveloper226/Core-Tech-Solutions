@@ -16,8 +16,7 @@ const serviceData = {
   "app-development": {
     title: "App Development",
 
-    image:
-      "/images/app.jpg",
+    image: "/images/app.jpg",
     summary:
       "We build scalable, secure, and modern mobile and web apps tailored to your business needs using cutting-edge frameworks and tools.",
     details: [
@@ -52,8 +51,7 @@ const serviceData = {
   "web-development": {
     title: "Website Development",
 
-    image:
-      "/images/web.jpg",
+    image: "/images/web.jpg",
     summary:
       "Lightning-fast, SEO-optimized, and conversion-focused websites built using Next.js, React, and modern architecture.",
     details: [
@@ -85,42 +83,41 @@ const serviceData = {
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
     },
   },
-  "seo": {
-  title: "SEO Optimization",
+  seo: {
+    title: "SEO Optimization",
 
-  image: "/images/seo.jpg",
-  summary:
-    "Improve your search engine rankings and attract more organic traffic with on-page, off-page, and technical SEO strategies.",
-  details: [
-    "Comprehensive site audits and keyword research.",
-    "Technical SEO optimization for faster indexing.",
-    "On-page SEO and content strategy.",
-    "Link-building and authority development.",
-  ],
-  cta: "Boost your visibility with expert SEO.",
-  price: "Starting from $500",
-  deliveryTime: "2-3 weeks",
-  clientsServed: "100+",
-  rating: "4.8",
-  features: [
-    "Keyword Research & Strategy",
-    "Technical SEO Audits",
-    "On-Page Optimization",
-    "Backlink Building",
-    "Content Optimization",
-    "Mobile SEO & Core Web Vitals",
-    "Local SEO Setup",
-    "Monthly Performance Reports",
-  ],
-  testimonial: {
-    text: "Thanks to their SEO expertise, our traffic has nearly doubled and we’re consistently ranking on the first page for our key terms.",
-    author: "Liam Patel",
-    role: "Marketing Director, BrightEdge Media",
-    avatar:
-      "https://images.unsplash.com/photo-1502767089025-6572583495b0?auto=format&fit=crop&w=150&q=80",
+    image: "/images/seo.jpg",
+    summary:
+      "Improve your search engine rankings and attract more organic traffic with on-page, off-page, and technical SEO strategies.",
+    details: [
+      "Comprehensive site audits and keyword research.",
+      "Technical SEO optimization for faster indexing.",
+      "On-page SEO and content strategy.",
+      "Link-building and authority development.",
+    ],
+    cta: "Boost your visibility with expert SEO.",
+    price: "Starting from $500",
+    deliveryTime: "2-3 weeks",
+    clientsServed: "100+",
+    rating: "4.8",
+    features: [
+      "Keyword Research & Strategy",
+      "Technical SEO Audits",
+      "On-Page Optimization",
+      "Backlink Building",
+      "Content Optimization",
+      "Mobile SEO & Core Web Vitals",
+      "Local SEO Setup",
+      "Monthly Performance Reports",
+    ],
+    testimonial: {
+      text: "Thanks to their SEO expertise, our traffic has nearly doubled and we’re consistently ranking on the first page for our key terms.",
+      author: "Liam Patel",
+      role: "Marketing Director, BrightEdge Media",
+      avatar:
+        "https://images.unsplash.com/photo-1502767089025-6572583495b0?auto=format&fit=crop&w=150&q=80",
+    },
   },
-}
-,
 };
 
 export default function ServiceDetails({ params }) {
