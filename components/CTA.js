@@ -1,6 +1,14 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation"; // for App Router (Next.js 13+)
 
 const CTA = () => {
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/#contact");
+  };
   return (
     <section className="py-32 bg-gradient-to-r from-blue-600 to-cyan-500">
       <div className="container">
@@ -19,7 +27,7 @@ const CTA = () => {
             >
               Learn More
             </Button>
-            <Button className="w-full sm:w-auto bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300">
+            <Button onClick={handleClick} className="w-full sm:w-auto bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300">
               Get Started
             </Button>
           </div>
