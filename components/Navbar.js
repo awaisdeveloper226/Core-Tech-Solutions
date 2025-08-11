@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -15,60 +16,73 @@ export default function Navbar() {
     { name: "Contact", path: "/#contact" },
   ];
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handler = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
   return (
-    <nav className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white py-2 px-6 shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Brand Name */}
+    <nav className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto flex justify-between items-center py-3 px-4 md:px-6">
+        {/* Brand */}
         <Link
           href="/"
-          className="text-3xl font-extrabold tracking-wide transition-all duration-300"
+          className="relative group text-2xl md:text-3xl font-extrabold tracking-wide transition-all duration-300"
         >
           CoreTech Solutions
-          {/* Underline effect for brand name */}
-          <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-8">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-6 lg:space-x-8">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.path}
-              className="relative px-4 py-2 text-lg font-medium transition-all duration-300 hover:text-cyan-200 group"
+              className="relative group px-2 py-1 text-lg font-medium transition-all duration-300 hover:text-cyan-200"
             >
               {item.name}
-              <span className="absolute left-0 bottom-0 w-full h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </Link>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded-lg transition transform hover:bg-white hover:bg-opacity-20"
+          className="md:hidden p-2 rounded-lg transition hover:bg-white hover:bg-opacity-20"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-center transition-all duration-300 ease-in-out transform ${
-          isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-4 invisible"
+        ref={menuRef}
+        className={`md:hidden bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        {navItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.path}
-            className="block py-3 text-lg font-medium transition-all duration-300 hover:bg-cyan-600 hover:text-white"
-            onClick={() => setIsOpen(false)}
-          >
-            {item.name}
-          </Link>
-        ))}
+        <div className="flex flex-col divide-y divide-blue-400">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.path}
+              className="block py-3 px-4 text-base font-medium hover:bg-cyan-600 hover:text-white transition-all duration-300"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );
-}  
-
+}
