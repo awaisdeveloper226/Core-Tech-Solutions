@@ -1,4 +1,34 @@
-<nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white shadow-lg z-50">
+"use client";
+
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X } from "lucide-react";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/#about" },
+    { name: "Services", path: "/#services" },
+    { name: "Blog", path: "/#blog" },
+    { name: "Contact", path: "/#contact" },
+  ];
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handler = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  return (
+   <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white shadow-lg z-50">
   <div className="container mx-auto flex justify-between items-center py-3 px-4 md:px-6">
     {/* Brand */}
     <Link
@@ -54,3 +84,6 @@
     </div>
   </div>
 </nav>
+
+  );
+}
