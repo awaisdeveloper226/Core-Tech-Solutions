@@ -12,23 +12,24 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative py-20 sm:py-28 lg:py-40 bg-fixed bg-cover bg-center"
+      className="relative min-h-screen bg-cover bg-center overflow-hidden flex items-center"
       style={{
         backgroundImage: "url('/images/hero.jpeg')",
         backgroundAttachment: "scroll", // better for mobile performance
+        paddingTop: "4rem", // space for navbar
       }}
     >
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-0"></div>
 
-      <div className="container relative z-10 px-4">
+      <div className="container relative z-10 px-4 flex flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-3xl text-center mx-auto"
         >
-          <h1 className="scroll-m-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
+          <h1 className="scroll-m-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4">
             Empowering{" "}
             <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
               Digital Innovation
