@@ -28,11 +28,22 @@ const data = [
     href: "/services/seo",
     image: "/images/seo.jpg",
   },
+  {
+    id: "automation",
+    title: "Automation Tools & Scripts",
+    summary:
+      "Automate repetitive tasks and optimize workflows with custom automation tools and scripts designed to save time and reduce errors.",
+    href: "/services/automation",
+    image: "/images/automation.png",
+  },
 ];
 
 const Services = () => {
   return (
-    <section className="py-28 bg-gradient-to-b from-white via-blue-50 to-white" id="services">
+    <section
+      className="py-28 bg-gradient-to-b from-white via-blue-50 to-white"
+      id="services"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -50,7 +61,7 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {data.map((item, i) => (
             <motion.a
               key={item.id}
@@ -62,14 +73,14 @@ const Services = () => {
               className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-white/80 backdrop-blur-md border border-white/20 shadow-md hover:shadow-xl transition-all"
             >
               {/* Image */}
-              <div className="relative aspect-video w-full overflow-hidden">
+              <div className="relative aspect-video w-full overflow-hidden rounded-t-2xl">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
                 />
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 rounded-t-2xl" />
               </div>
 
               {/* Content */}

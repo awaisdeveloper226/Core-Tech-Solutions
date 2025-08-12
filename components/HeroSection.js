@@ -30,9 +30,9 @@ export default function HeroSection() {
           className="max-w-3xl text-center mx-auto"
         >
           <h1 className="scroll-m-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-4">
-            Empowering{" "}
+            Powering{" "}
             <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-              Digital Innovation
+              Digital Growth & Automation
             </span>{" "}
             for Your Business
           </h1>
@@ -43,9 +43,10 @@ export default function HeroSection() {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="mt-4 text-base sm:text-lg md:text-xl text-white/90"
           >
-            From cutting-edge web and mobile app development to strategic data
-            analytics, CoreTech Solutions equips your business with scalable,
-            efficient, and future-ready digital solutions.
+            From custom web and mobile apps to AI-driven automation tools,
+            scripts, and SEO services — CoreTech Solutions delivers scalable,
+            efficient, and future-ready digital solutions that save time,
+            reduce costs, and accelerate growth.
           </motion.p>
 
           <motion.div
@@ -58,13 +59,13 @@ export default function HeroSection() {
               className="px-6 sm:px-8 py-3 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={() => handleRedirect("/#contact")}
             >
-              Start Your Project
+              Get Your Custom Solution
             </button>
             <button
               className="px-6 sm:px-8 py-3 text-blue-600 bg-white rounded-full shadow-lg border border-blue-600 hover:bg-blue-50 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={() => handleRedirect("/#work-with-us")}
+              onClick={() => handleRedirect("/#automation-tools")}
             >
-              Why Work With Us
+              Explore Automation Tools
             </button>
           </motion.div>
         </motion.div>

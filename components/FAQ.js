@@ -5,54 +5,54 @@ import { Badge } from "@/components/ui/badge";
 
 const faqs = [
   {
-    question: "Why do I need a website for my business?",
+    question: "Why does my business need a website?",
     answer:
-      "Having a website is essential for establishing an online presence. It helps potential customers find you, learn more about your services or products, and engage with your brand. A website also enhances your credibility, provides a platform for online sales or lead generation, and can help you stand out from your competitors.",
+      "A website is your online storefront — it helps customers find you anytime, anywhere. It builds trust, showcases your services, and allows you to reach a wider audience effectively.",
   },
   {
-    question: "How long will it take to build my website?",
+    question: "How long does it take to develop a web or mobile app?",
     answer:
-      "The timeline for building a website depends on the complexity and features required. A basic website can take anywhere from a few days to a couple of weeks, while more complex websites with custom features may take a month or more. We’ll provide you with a clear timeline and keep you updated throughout the process.",
+      "Development time varies by project complexity. Simple websites or apps may take 1-3 weeks, while custom, feature-rich solutions typically take 4-8 weeks or more. We provide clear timelines upfront and keep you updated.",
   },
   {
-    question: "How much will a website cost?",
+    question: "What is included in your SEO services?",
     answer:
-      "The cost of building a website depends on factors such as design, features, and complexity. We offer flexible pricing based on your specific needs. After understanding your requirements, we will provide a customized quote that fits your budget and goals.",
+      "Our SEO services cover keyword research, on-page optimization, technical SEO audits, content strategy, and link-building to improve your search engine rankings and attract organic traffic.",
   },
   {
-    question: "Will my website be mobile-friendly?",
+    question: "How can automation benefit my business?",
     answer:
-      "Yes, all websites we build are fully responsive, meaning they will look great and function well on mobile phones, tablets, and desktop computers. This ensures that your customers have a seamless experience no matter what device they use.",
+      "Automation helps streamline repetitive tasks, improve accuracy, and increase efficiency — freeing your team to focus on higher-value work and accelerating growth across operations.",
   },
   {
-    question: "Can I update the website myself after it's built?",
+    question: "Can I update my website or app content myself?",
     answer:
-      "Yes! We build websites with user-friendly content management systems (CMS), so you can easily update content, add blog posts, update images, and more. If needed, we’ll also provide you with simple tutorials or training to manage your website.",
+      "Yes! We build with easy-to-use content management systems (CMS) so you can update content, images, and other elements without technical help. We also offer training if needed.",
   },
   {
-    question: "What happens if my website stops working or I need changes after it’s live?",
+    question: "Will my website and app be mobile-friendly?",
     answer:
-      "We provide ongoing support and maintenance for your website. Whether you need minor updates, fixes, or troubleshooting, we're here to help. You can contact us anytime if you need assistance, and we’ll ensure your website is running smoothly.",
+      "Absolutely! All our web and app solutions are designed to be fully responsive and work seamlessly across all devices — smartphones, tablets, and desktops.",
   },
   {
-    question: "Will my website be secure?",
+    question: "What ongoing support do you provide after launch?",
     answer:
-      "Yes, we take security seriously. We implement industry-standard security measures to protect your website from unauthorized access, data breaches, and other online threats. This includes SSL certificates, secure hosting, and regular updates to ensure your site stays safe.",
+      "We offer maintenance and support services including updates, security patches, performance monitoring, and feature enhancements to keep your website or app running smoothly.",
   },
   {
-    question: "Can you help me with SEO (Search Engine Optimization)?",
+    question: "Can you integrate automation into my existing systems?",
     answer:
-      "Absolutely! We build websites with SEO best practices in mind to help you rank higher on search engines like Google. This includes optimizing your content, using the right keywords, and ensuring that your site loads quickly and functions properly. We can also offer additional SEO services to boost your online visibility even more.",
+      "Yes, we can analyze your current workflows and integrate automation tools that connect with your existing software to optimize your business processes.",
   },
   {
-    question: "Do I need to provide my own content or images?",
+    question: "How do you ensure the security of my website and apps?",
     answer:
-      "We can help you with both content and images. If you already have your own content, we can incorporate it into your website. If not, we can assist with creating content or sourcing high-quality stock images that reflect your brand.",
+      "We implement best practices including SSL encryption, secure hosting, regular updates, and vulnerability testing to protect your digital assets and customer data.",
   },
   {
-    question: "Can I add an online store to my website?",
+    question: "Do I need to provide content and images for my website or app?",
     answer:
-      "Yes, we can integrate an online store into your website, allowing you to sell products or services directly through your site. We’ll work with you to set up an easy-to-use e-commerce platform, including product pages, payment processing, and shipping options.",
+      "You can provide your own, or we can help create professional content and source high-quality images that fit your brand and messaging.",
   },
 ];
 
@@ -65,11 +65,11 @@ const FAQ = () => {
 
   return (
     <section className="py-32 bg-gradient-to-r from-gray-50 to-gray-200" id="faq">
-      <div className="container mx-auto text-center" >
+      <div className="container mx-auto text-center">
         <Badge className="text-xs font-medium text-teal-500 uppercase">FAQ</Badge>
         <h1 className="mt-4 text-4xl font-semibold text-gray-800">Common Questions & Answers</h1>
         <p className="mt-6 font-medium text-gray-600">
-          Find answers to the most frequently asked questions and learn more about our services.
+          Find answers to the most frequently asked questions about our Web Development, App Development, SEO, and Automation services.
         </p>
       </div>
       <div className="mx-auto mt-14 max-w-4xl">

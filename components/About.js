@@ -12,12 +12,12 @@ const About = () => {
     {
       icon: CircleArrowRight,
       title: "Results-Driven",
-      desc: "Focused on real outcomes, not vanity metrics. We iterate fast.",
+      desc: "Focused on real growth through web, app, SEO, and automation solutions.",
     },
     {
       icon: Settings,
       title: "Empowerment",
-      desc: "We hand you tools & knowledge, not dependency.",
+      desc: "We equip you with tools and knowledge to automate and optimize independently.",
     },
   ];
 
@@ -27,7 +27,7 @@ const About = () => {
       id="about"
     >
       <div className="container mx-auto flex flex-col gap-20 sm:gap-24 md:gap-28 px-4">
-        
+
         {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,11 +36,10 @@ const About = () => {
           className="flex flex-col gap-5 text-center md:text-left items-center md:items-start"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Bringing Web, App & Data Power to Your Business
+            Powering Your Business with Web, App, SEO & Automation
           </h1>
           <p className="max-w-2xl text-base sm:text-lg md:text-xl text-black/80">
-            We streamline the creation of customer portals, mobile apps, internal tools, 
-            and analytics dashboards—in days, not months.
+            We build scalable customer portals, mobile apps, and deliver impactful SEO strategies alongside AI-driven automation tools that save time and drive growth.
           </p>
         </motion.div>
 
@@ -64,15 +63,13 @@ const About = () => {
               Our Mission
             </p>
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-snug">
-              Empowering Businesses Through Scalable & Future-Ready Digital Solutions
+              Empowering Businesses with Comprehensive Digital Solutions
             </h3>
             <p className="text-black/80 text-sm sm:text-base">
-              At CoreTech Solutions, we’re on a mission to simplify technology for businesses—
-              building lightning-fast websites, powerful apps, and data-driven tools that solve real problems.
+              At CoreTech Solutions, we combine cutting-edge web and app development with expert SEO strategies and powerful automation tools, delivering scalable and future-ready solutions.
             </p>
             <p className="text-black/80 text-sm sm:text-base">
-              Whether you're a startup or scaling enterprise, we equip you with the tools, 
-              support, and expertise needed to grow confidently in today’s digital-first world.
+              From startups to enterprises, we provide the technology and expertise to optimize your online presence, streamline operations, and accelerate growth.
             </p>
           </motion.div>
         </div>
@@ -84,8 +81,7 @@ const About = () => {
               How We Empower Innovation
             </h2>
             <p className="text-base sm:text-lg text-black/80">
-              We’ve helped dozens of companies deliver impactful digital products efficiently. 
-              Here’s what drives us:
+              We’ve helped numerous businesses grow by delivering impactful digital solutions across web, app, SEO, and automation. Here’s what drives us:
             </p>
           </div>
 

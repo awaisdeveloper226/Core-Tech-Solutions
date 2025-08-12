@@ -15,7 +15,6 @@ import { useRouter } from "next/navigation";
 const serviceData = {
   "app-development": {
     title: "App Development",
-
     image: "/images/app.jpg",
     summary:
       "We build scalable, secure, and modern mobile and web apps tailored to your business needs using cutting-edge frameworks and tools.",
@@ -50,7 +49,6 @@ const serviceData = {
   },
   "web-development": {
     title: "Website Development",
-
     image: "/images/web.jpg",
     summary:
       "Lightning-fast, SEO-optimized, and conversion-focused websites built using Next.js, React, and modern architecture.",
@@ -85,7 +83,6 @@ const serviceData = {
   },
   seo: {
     title: "SEO Optimization",
-
     image: "/images/seo.jpg",
     summary:
       "Improve your search engine rankings and attract more organic traffic with on-page, off-page, and technical SEO strategies.",
@@ -116,6 +113,40 @@ const serviceData = {
       role: "Marketing Director, BrightEdge Media",
       avatar:
         "https://images.unsplash.com/photo-1502767089025-6572583495b0?auto=format&fit=crop&w=150&q=80",
+    },
+  },
+  automation: {
+    title: "Automation Tools & Scripts",
+    image: "/images/automation1.png",
+    summary:
+      "Automate repetitive tasks and optimize workflows with custom automation tools and scripts designed to save time and reduce errors.",
+    details: [
+      "Custom scripting for task automation.",
+      "Integration with third-party services and APIs.",
+      "Workflow optimization and scheduling.",
+      "Error handling and reporting mechanisms.",
+    ],
+    cta: "Streamline your business processes today!",
+    price: "Starting from $600",
+    deliveryTime: "2-3 weeks",
+    clientsServed: "30+",
+    rating: "4.9",
+    features: [
+      "Custom Automation Scripts",
+      "API Integrations & Connectors",
+      "Scheduled Task Automation",
+      "Error Monitoring & Alerts",
+      "Scalable Workflow Solutions",
+      "Cross-Platform Compatibility",
+      "Reporting & Analytics",
+      "Ongoing Maintenance & Support",
+    ],
+    testimonial: {
+      text: "Their automation solutions transformed our operations—saving us hours every week and reducing manual errors drastically.",
+      author: "Emma Wilson",
+      role: "Operations Manager, Streamline Co.",
+      avatar:
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
     },
   },
 };
@@ -215,22 +246,23 @@ export default function ServiceDetails({ params }) {
             </div>
 
             {/* Image */}
-            <div className="relative w-full">
-              <div className="relative overflow-hidden rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="relative w-full max-w-[640px] mx-auto">
+              <div className="relative overflow-hidden rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 aspect-video">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-96 object-cover"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
-              <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 border border-gray-100">
-                <div className="text-sm text-gray-500">Starting from</div>
-                <div className="text-2xl font-bold text-blue-600">
-                  {service.price}
-                </div>
-              </div>
+              <div className="absolute -top-3 -right-3 bg-white rounded-xl shadow-xl px-4 py-3 border border-gray-100">
+  <div className="text-xs text-gray-500">Starting from</div>
+  <div className="text-lg font-bold text-blue-600">
+    {service.price}
+  </div>
+</div>
+
             </div>
           </div>
         </div>

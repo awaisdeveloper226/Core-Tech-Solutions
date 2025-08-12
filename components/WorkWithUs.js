@@ -11,52 +11,55 @@ import {
 
 const reasons = [
   {
-    title: "Quality-Driven",
+    title: "Web Development",
     description:
-      "We craft high-performance websites with Next.js—fast, secure, and built to deliver an exceptional user experience across all devices.",
-    icon: ZoomIn,
-    color: "from-blue-500 to-purple-500",
+      "We build fast, scalable, and responsive websites tailored to your business goals using the latest tech.",
+    icon: Layers,
+    color: "from-blue-600 to-purple-600",
   },
   {
-    title: "Proven Experience",
+    title: "App Development",
     description:
-      "With over three years in web development, we've successfully delivered diverse digital projects that solve real business problems.",
+      "Custom mobile and web applications designed to deliver seamless user experiences and drive engagement.",
+    icon: BatteryCharging,
+    color: "from-green-500 to-cyan-500",
+  },
+  {
+    title: "SEO Optimization",
+    description:
+      "Improve your search engine rankings and increase organic traffic with data-driven SEO strategies.",
     icon: BarChartHorizontal,
     color: "from-cyan-500 to-blue-500",
   },
   {
+    title: "Automation Solutions",
+    description:
+      "Streamline business operations with intelligent automation to save time and boost productivity.",
+    icon: WandSparkles,
+    color: "from-purple-500 to-pink-500",
+  },
+  {
     title: "Reliable Support",
     description:
-      "Our partnership doesn’t end at launch. We provide consistent updates, security patches, and technical support to keep you ahead.",
+      "Our team provides continuous updates, maintenance, and support to keep your systems running smoothly.",
     icon: CircleHelp,
     color: "from-indigo-500 to-blue-500",
   },
   {
-    title: "Innovative Solutions",
-    description:
-      "We leverage the latest technologies to build custom, forward-thinking digital products that help your brand stand out online.",
-    icon: WandSparkles,
-    color: "from-blue-500 to-teal-500",
-  },
-  {
     title: "Business-Focused Results",
     description:
-      "Every line of code we write is aimed at real outcomes—boosting your speed, SEO rankings, and user engagement.",
-    icon: Layers,
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    title: "Optimized Performance",
-    description:
-      "Our websites are engineered for speed, scalability, and conversion—helping you grow with confidence in a competitive market.",
-    icon: BatteryCharging,
-    color: "from-green-500 to-cyan-500",
+      "We focus on delivering real outcomes — increasing speed, SEO rankings, user engagement, and ROI.",
+    icon: ZoomIn,
+    color: "from-purple-500 to-blue-500",
   },
 ];
 
 const WorkWithUs = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-blue-50 to-white" id="work-with-us">
+    <section
+      className="py-24 bg-gradient-to-b from-white via-blue-50 to-white"
+      id="work-with-us"
+    >
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <motion.div

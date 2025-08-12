@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function BlogSection() {
@@ -7,32 +7,32 @@ export default function BlogSection() {
     {
       title: "Why Every Business Needs a Website in 2025",
       summary:
-        "In the digital-first world of 2025, discover why a well-built website is more than a luxury—it's a business necessity.",
+        "Explore how a modern, responsive website built with cutting-edge web development techniques can transform your business and boost your online presence.",
       link: "/blog/why-every-business-needs-a-website-2025",
       image:
         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Custom App vs Off-the-Shelf Software",
+      title: "Choosing Between Custom Apps and Off-the-Shelf Solutions",
       summary:
-        "Struggling to choose between prebuilt tools and custom solutions? Learn the pros, cons, and the best fit for your business.",
+        "Discover how tailored app development can meet your unique business needs better than generic software, and why it’s a smart long-term investment.",
       link: "/blog/custom-app-vs-off-the-shelf",
       image:
         "https://images.unsplash.com/photo-1612832021376-99c0b7b1c6b5?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "SEO Basics for Business Owners",
+      title: "SEO Strategies That Drive Real Traffic in 2025",
       summary:
-        "Confused by SEO? Here's a practical guide to getting found on Google and growing your organic traffic—no jargon.",
+        "Learn the latest SEO optimization techniques to improve your search rankings, increase organic traffic, and stay ahead in a competitive digital market.",
       link: "/blog/seo-basics-business-owners",
       image:
         "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=1200&q=80",
     },
     {
-      title: "Turn Data Into Business Decisions",
+      title: "Automating Your Business Processes for Efficiency and Growth",
       summary:
-        "Explore how analytics helps you make smarter decisions and improve your performance with real-time dashboards.",
-      link: "/blog/data-into-decisions",
+        "Explore powerful automation tools and scripts that can streamline operations, save time, and increase productivity across your business workflows.",
+      link: "/blog/business-automation-tools",
       image:
         "https://images.unsplash.com/photo-1581093588401-050f19b9f74b?auto=format&fit=crop&w=1200&q=80",
     },
@@ -45,7 +45,7 @@ export default function BlogSection() {
           Latest from Our Blog
         </h2>
         <p className="mt-4 text-lg text-gray-600">
-          Insights to help you understand, grow, and succeed in the digital world.
+          Insights on Web Development, App Development, SEO, and Automation to help your business thrive.
         </p>
       </div>
 
@@ -72,7 +72,7 @@ export default function BlogSection() {
                 {blog.title}
               </h3>
               <p className="text-gray-600 mt-3 mb-5">{blog.summary}</p>
-              <a
+              <Link
                 href={blog.link}
                 className="inline-flex items-center text-blue-600 font-medium group-hover:gap-2 transition-all duration-300"
               >
@@ -80,7 +80,7 @@ export default function BlogSection() {
                 <span className="transform group-hover:translate-x-1 transition-transform duration-300">
                   →
                 </span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         ))}
