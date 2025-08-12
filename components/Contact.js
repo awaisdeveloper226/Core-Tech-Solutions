@@ -489,7 +489,7 @@ const Contact = () => {
             <div className="space-y-2">
               <h2 className="text-2xl font-bold text-gray-900">Success!</h2>
               <p className="text-gray-600">
-                Thank you for reaching out. We&apos;ve received your message and will get back to you within 2-4 hours.
+                Thank you for reaching out. We&apos;ve received your order and will get back to you within 2-4 hours.
               </p>
             </div>
             
