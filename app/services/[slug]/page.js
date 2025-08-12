@@ -257,12 +257,11 @@ export default function ServiceDetails({ params }) {
               </div>
 
               <div className="absolute -top-3 -right-3 bg-white rounded-xl shadow-xl px-4 py-3 border border-gray-100">
-  <div className="text-xs text-gray-500">Starting from</div>
-  <div className="text-lg font-bold text-blue-600">
-    {service.price}
-  </div>
-</div>
-
+                <div className="text-xs text-gray-500">Starting from</div>
+                <div className="text-lg font-bold text-blue-600">
+                  {service.price}
+                </div>
+              </div>
             </div>
           </div>
         </div>
