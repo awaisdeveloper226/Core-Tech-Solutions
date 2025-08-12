@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import {
   BarChartHorizontal,
   BatteryCharging,
@@ -62,29 +61,20 @@ const WorkWithUs = () => {
     >
       <div className="container mx-auto px-4">
         {/* Section Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Why Work With CoreTech Solutions?
           </h2>
           <p className="mt-4 text-lg md:text-xl text-black/80 max-w-2xl mx-auto">
             Partner with a team that combines technical expertise with a deep focus on business growth.
           </p>
-        </motion.div>
+        </div>
 
         {/* Cards */}
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center bg-white/70 backdrop-blur-md p-8 rounded-2xl border border-white/30 shadow-md hover:shadow-2xl transition-all"
             >
               <div
@@ -96,7 +86,7 @@ const WorkWithUs = () => {
                 {reason.title}
               </h3>
               <p className="text-center text-black/70 mt-3">{reason.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

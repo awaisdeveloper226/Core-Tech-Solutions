@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const data = [
   {
@@ -46,30 +46,21 @@ const Services = () => {
     >
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-14 text-center"
-        >
+        <div className="mb-14 text-center">
           <h2 className="text-4xl font-bold md:text-5xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Our Services
           </h2>
           <p className="mt-4 text-lg text-black/70 max-w-2xl mx-auto">
             End-to-end digital solutions designed to help your business thrive in a competitive market.
           </p>
-        </motion.div>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {data.map((item, i) => (
-            <motion.a
+          {data.map((item) => (
+            <Link
               key={item.id}
               href={item.href}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.03 }}
               className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-white/80 backdrop-blur-md border border-white/20 shadow-md hover:shadow-xl transition-all"
             >
               {/* Image */}
@@ -94,7 +85,7 @@ const Services = () => {
                   <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
-            </motion.a>
+            </Link>
           ))}
         </div>
       </div>

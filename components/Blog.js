@@ -1,6 +1,6 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function BlogSection() {
   const blogs = [
@@ -15,7 +15,7 @@ export default function BlogSection() {
     {
       title: "Choosing Between Custom Apps and Off-the-Shelf Solutions",
       summary:
-        "Discover how tailored app development can meet your unique business needs better than generic software, and why it’s a smart long-term investment.",
+        "Discover how tailored app development can meet your unique business needs better than generic software, and why it's a smart long-term investment.",
       link: "/blog/custom-app-vs-off-the-shelf",
       image:
         "https://images.unsplash.com/photo-1612832021376-99c0b7b1c6b5?auto=format&fit=crop&w=1200&q=80",
@@ -45,25 +45,29 @@ export default function BlogSection() {
           Latest from Our Blog
         </h2>
         <p className="mt-4 text-lg text-gray-600">
-          Insights on Web Development, App Development, SEO, and Automation to help your business thrive.
+          Insights on Web Development, App Development, SEO, and Automation to
+          help your business thrive.
         </p>
       </div>
 
       <div className="grid gap-10 md:grid-cols-2">
         {blogs.map((blog, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
             className="group rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-shadow duration-500"
           >
             <div className="relative overflow-hidden">
-              <img
+              <Image
                 src={blog.image}
                 alt={blog.title}
+                width={800} // Set appropriate dimensions
+                height={450} // Maintain aspect ratio (800x450 ≈ 16:9)
                 className="w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
@@ -82,7 +86,7 @@ export default function BlogSection() {
                 </span>
               </Link>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
