@@ -35,18 +35,17 @@ const Testimonials = () => {
     ...testimonials,
     ...testimonials,
     ...testimonials,
-    ...testimonials,
   ];
 
   return (
     <section
       id="testimonials"
-      className="py-24 bg-gradient-to-r from-blue-600 to-cyan-500 overflow-hidden"
+      className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-cyan-500 overflow-hidden"
       aria-label="Client testimonials"
     >
-      <div className="container mx-auto max-w-5xl px-6 text-center text-white mb-12">
-        <h2 className="text-4xl font-bold mb-6">What Our Clients Say</h2>
-        <p className="mb-12 text-lg max-w-3xl mx-auto opacity-90">
+      <div className="container mx-auto max-w-5xl px-4 sm:px-6 text-center text-white mb-8 md:mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">What Our Clients Say</h2>
+        <p className="text-base md:text-lg max-w-3xl mx-auto opacity-90">
           Discover how CoreTech Solutions' Web Development, App Development, SEO
           Services, and Automation have helped businesses like yours thrive.
         </p>
@@ -54,34 +53,34 @@ const Testimonials = () => {
 
       <div className="relative">
         {/* Gradient overlays for smooth fade effect */}
-        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-blue-600 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-cyan-500 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-blue-600 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-cyan-500 to-transparent z-10 pointer-events-none"></div>
         
         <div className="testimonials-container">
           <div className="testimonials-track">
             {extendedTestimonials.map((testimonial, index) => (
               <article
                 key={index}
-                className="testimonial-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 shadow-lg text-left text-white"
+                className="testimonial-card bg-white bg-opacity-10 backdrop-blur-sm rounded-xl md:rounded-3xl p-6 md:p-8 shadow-lg text-left text-white mx-2 md:mx-0"
                 aria-label={`Testimonial by ${testimonial.name}, ${testimonial.role} at ${testimonial.company}`}
               >
-                <p className="text-xl italic mb-6 leading-relaxed">
+                <p className="text-base md:text-xl italic mb-4 md:mb-6 leading-relaxed">
                   &quot;{testimonial.feedback}&quot;
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="relative w-16 h-16 rounded-full border-4 border-white shadow-md overflow-hidden flex-shrink-0">
+                <div className="flex items-center gap-3 md:gap-4">
+                  <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full border-2 md:border-4 border-white shadow-md overflow-hidden flex-shrink-0">
                     <Image
                       src={testimonial.photo}
                       alt={testimonial.name}
                       fill
-                      sizes="64px"
+                      sizes="(max-width: 768px) 48px, 64px"
                       className="object-cover"
                       priority={index < 3}
                     />
                   </div>
                   <div>
-                    <p className="font-semibold text-lg">{testimonial.name}</p>
-                    <p className="text-sm opacity-80">
+                    <p className="font-semibold text-base md:text-lg">{testimonial.name}</p>
+                    <p className="text-xs md:text-sm opacity-80">
                       {testimonial.role}, {testimonial.company}
                     </p>
                   </div>
@@ -101,20 +100,16 @@ const Testimonials = () => {
 
         .testimonials-track {
           display: flex;
-          gap: 2.5rem;
-          animation: scroll-smooth 40s linear infinite;
+          gap: 1rem;
+          animation: scroll-smooth 30s linear infinite;
           width: max-content;
+          padding: 0 1rem;
         }
 
         .testimonial-card {
-          width: 380px;
-          min-width: 380px;
+          width: 300px;
+          min-width: 300px;
           flex-shrink: 0;
-          transition: transform 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-          transform: translateY(-8px);
         }
 
         @keyframes scroll-smooth {
@@ -122,13 +117,8 @@ const Testimonials = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-25% - 0.625rem));
+            transform: translateX(calc(-33.333% - 0.333rem));
           }
-        }
-
-        /* Pause animation on hover for better UX */
-        .testimonials-track:hover {
-          animation-play-state: paused;
         }
 
         /* Ensure smooth performance */
@@ -148,15 +138,16 @@ const Testimonials = () => {
           scrollbar-width: none;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
+        /* Mobile adjustments */
+        @media (max-width: 640px) {
           .testimonial-card {
-            width: 320px;
-            min-width: 320px;
+            width: 280px;
+            min-width: 280px;
           }
           
           .testimonials-track {
-            gap: 1.5rem;
+            gap: 0.75rem;
+            padding: 0 0.5rem;
           }
           
           @keyframes scroll-smooth {
@@ -164,7 +155,7 @@ const Testimonials = () => {
               transform: translateX(0);
             }
             100% {
-              transform: translateX(calc(-25% - 0.375rem));
+              transform: translateX(calc(-33.333% - 0.25rem));
             }
           }
         }
