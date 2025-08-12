@@ -13,7 +13,8 @@ import {
   Send, 
   Loader2,
   Clock,
-  ArrowRight
+  ArrowRight,
+  Briefcase
 } from "lucide-react";
 import Link from "next/link";
 
@@ -149,7 +150,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" id="contact">
+    <section className="relative py-12 md:py-24 lg:py-32 overflow-hidden" id="contact">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-500 rounded-full filter blur-xl animate-pulse"></div>
@@ -157,41 +158,41 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="relative container mx-auto max-w-7xl px-6">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          <div className="space-y-8 lg:sticky lg:top-8">
-            <div className="space-y-6">
+      <div className="relative container mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-start">
+          <div className="space-y-6 md:space-y-8 lg:sticky lg:top-8">
+            <div className="space-y-4 md:space-y-6">
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <span className="text-sm font-medium text-white">Get in Touch</span>
                 <ArrowRight className="ml-2 w-4 h-4 text-white" />
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
                 Let&apos;s Build Your
                 <span className="block bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text text-transparent">
                   Digital Success
                 </span>
               </h1>
               
-              <p className="text-lg lg:text-xl text-indigo-100 leading-relaxed max-w-lg">
+              <p className="text-base sm:text-lg lg:text-xl text-indigo-100 leading-relaxed max-w-lg">
                 Ready to transform your business with cutting-edge digital solutions? 
                 Our expert team crafts custom strategies tailored to your unique goals.
               </p>
             </div>
 
-            <div className="grid gap-4">
-              <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-indigo-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="w-6 h-6 text-white" />
+            <div className="grid gap-3 sm:gap-4">
+              <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-indigo-500 rounded-lg sm:rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-indigo-200">Call us directly</p>
+                    <p className="text-xs sm:text-sm font-medium text-indigo-200">Call us directly</p>
                     <Link
                       href="https://wa.me/923295423064"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white font-semibold text-lg hover:text-indigo-200 transition-colors"
+                      className="text-white font-semibold text-base sm:text-lg hover:text-indigo-200 transition-colors"
                     >
                       +92 329 5423 064
                     </Link>
@@ -199,16 +200,16 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-purple-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <Mail className="w-6 h-6 text-white" />
+              <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-purple-500 rounded-lg sm:rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-indigo-200">Email us</p>
+                    <p className="text-xs sm:text-sm font-medium text-indigo-200">Email us</p>
                     <Link
                       href="mailto:info@coretechsolutions.com"
-                      className="text-white font-semibold text-lg hover:text-indigo-200 transition-colors"
+                      className="text-white font-semibold text-base sm:text-lg hover:text-indigo-200 transition-colors"
                     >
                       info@coretechsolutions.com
                     </Link>
@@ -216,14 +217,14 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-pink-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <Clock className="w-6 h-6 text-white" />
+              <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-pink-500 rounded-lg sm:rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-indigo-200">Response time</p>
-                    <p className="text-white font-semibold text-lg">Within 2-4 hours</p>
+                    <p className="text-xs sm:text-sm font-medium text-indigo-200">Response time</p>
+                    <p className="text-white font-semibold text-base sm:text-lg">Within 2-4 hours</p>
                   </div>
                 </div>
               </div>
@@ -233,21 +234,21 @@ const Contact = () => {
           <div className="relative">
             <form
               onSubmit={handleSubmit}
-              className="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 space-y-6 backdrop-blur-sm border border-white/10"
+              className="bg-white rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl p-6 sm:p-8 lg:p-10 space-y-4 sm:space-y-6 backdrop-blur-sm border border-white/10"
               noValidate
             >
-              <div className="text-center mb-8">
-                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+              <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-1 sm:mb-2">
                   Start Your Project
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600">
                   Fill out the form below and we&apos;ll get back to you within 24 hours
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName" className="text-gray-800 font-semibold">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-1 sm:space-y-2">
+                  <Label htmlFor="firstName" className="text-sm sm:text-base text-gray-800 font-semibold">
                     First Name *
                   </Label>
                   <Input
@@ -256,7 +257,7 @@ const Contact = () => {
                     value={form.firstName}
                     onChange={handleChange}
                     required
-                    className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                    className={`p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all duration-200 ${
                       fieldErrors.firstName 
                         ? 'border-red-300 focus:border-red-500 focus:ring-red-200' 
                         : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-100'
@@ -264,15 +265,15 @@ const Contact = () => {
                     placeholder="John"
                   />
                   {fieldErrors.firstName && (
-                    <p className="text-red-600 text-sm flex items-center gap-1">
-                      <XCircle className="w-4 h-4" />
+                    <p className="text-red-600 text-xs sm:text-sm flex items-center gap-1">
+                      <XCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                       {fieldErrors.firstName}
                     </p>
                   )}
                 </div>
                 
-                <div className="space-y-2">
-                  <Label htmlFor="lastName" className="text-gray-800 font-semibold">
+                <div className="space-y-1 sm:space-y-2">
+                  <Label htmlFor="lastName" className="text-sm sm:text-base text-gray-800 font-semibold">
                     Last Name *
                   </Label>
                   <Input
@@ -281,7 +282,7 @@ const Contact = () => {
                     value={form.lastName}
                     onChange={handleChange}
                     required
-                    className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                    className={`p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all duration-200 ${
                       fieldErrors.lastName 
                         ? 'border-red-300 focus:border-red-500 focus:ring-red-200' 
                         : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-100'
@@ -289,16 +290,16 @@ const Contact = () => {
                     placeholder="Doe"
                   />
                   {fieldErrors.lastName && (
-                    <p className="text-red-600 text-sm flex items-center gap-1">
-                      <XCircle className="w-4 h-4" />
+                    <p className="text-red-600 text-xs sm:text-sm flex items-center gap-1">
+                      <XCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                       {fieldErrors.lastName}
                     </p>
                   )}
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-gray-800 font-semibold">
+              <div className="space-y-1 sm:space-y-2">
+                <Label htmlFor="email" className="text-sm sm:text-base text-gray-800 font-semibold">
                   Email Address *
                 </Label>
                 <Input
@@ -307,7 +308,7 @@ const Contact = () => {
                   value={form.email}
                   onChange={handleChange}
                   required
-                  className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                  className={`p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all duration-200 ${
                     fieldErrors.email 
                       ? 'border-red-300 focus:border-red-500 focus:ring-red-200' 
                       : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-100'
@@ -315,15 +316,15 @@ const Contact = () => {
                   placeholder="john@example.com"
                 />
                 {fieldErrors.email && (
-                  <p className="text-red-600 text-sm flex items-center gap-1">
-                    <XCircle className="w-4 h-4" />
+                  <p className="text-red-600 text-xs sm:text-sm flex items-center gap-1">
+                    <XCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                     {fieldErrors.email}
                   </p>
                 )}
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="subject" className="text-gray-800 font-semibold">
+              <div className="space-y-1 sm:space-y-2">
+                <Label htmlFor="subject" className="text-sm sm:text-base text-gray-800 font-semibold">
                   Subject *
                 </Label>
                 <Input
@@ -332,7 +333,7 @@ const Contact = () => {
                   value={form.subject}
                   onChange={handleChange}
                   required
-                  className={`p-4 rounded-xl border-2 transition-all duration-200 ${
+                  className={`p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all duration-200 ${
                     fieldErrors.subject 
                       ? 'border-red-300 focus:border-red-500 focus:ring-red-200' 
                       : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-100'
@@ -340,30 +341,30 @@ const Contact = () => {
                   placeholder="What can we help you with?"
                 />
                 {fieldErrors.subject && (
-                  <p className="text-red-600 text-sm flex items-center gap-1">
-                    <XCircle className="w-4 h-4" />
+                  <p className="text-red-600 text-xs sm:text-sm flex items-center gap-1">
+                    <XCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                     {fieldErrors.subject}
                   </p>
                 )}
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1">
                     Services of Interest *
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-xs sm:text-sm text-gray-600">
                     Select one or more services that align with your business needs
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                   {services.map((service) => {
                     const isSelected = form.servicesInterested.includes(service.name);
                     return (
                       <label
                         key={service.name}
-                        className={`group relative cursor-pointer rounded-xl border-2 p-4 transition-all duration-200 hover:shadow-md ${
+                        className={`group relative cursor-pointer rounded-lg sm:rounded-xl border-2 p-3 sm:p-4 transition-all duration-200 hover:shadow-sm ${
                           isSelected
                             ? "border-indigo-500 bg-indigo-50 shadow-sm"
                             : "border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50"
@@ -371,7 +372,7 @@ const Contact = () => {
                       >
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
-                            <span className={`block text-sm font-semibold ${
+                            <span className={`block text-xs sm:text-sm font-semibold ${
                               isSelected ? "text-indigo-900" : "text-gray-900"
                             }`}>
                               {service.name}
@@ -383,13 +384,13 @@ const Contact = () => {
                             </span>
                           </div>
 
-                          <div className={`ml-3 transition-colors duration-200 ${
+                          <div className={`ml-2 sm:ml-3 transition-colors duration-200 ${
                             isSelected ? "text-indigo-600" : "text-gray-400"
                           }`}>
                             {isSelected ? (
-                              <CheckCircle2 className="w-5 h-5" />
+                              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
                             ) : (
-                              <div className="w-5 h-5 rounded-full border-2 border-current group-hover:border-gray-500" />
+                              <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-current group-hover:border-gray-500" />
                             )}
                           </div>
                         </div>
@@ -408,17 +409,17 @@ const Contact = () => {
                 </div>
 
                 {serviceError && (
-                  <div className="flex items-start gap-3 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
-                    <XCircle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-red-700 font-medium">
+                  <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 bg-red-50 border-2 border-red-200 rounded-lg sm:rounded-xl">
+                    <XCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 mt-0.5 flex-shrink-0" />
+                    <p className="text-xs sm:text-sm text-red-700 font-medium">
                       {serviceError}
                     </p>
                   </div>
                 )}
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-gray-800 font-semibold">
+              <div className="space-y-1 sm:space-y-2">
+                <Label htmlFor="message" className="text-sm sm:text-base text-gray-800 font-semibold">
                   Project Details *
                 </Label>
                 <Textarea
@@ -427,16 +428,16 @@ const Contact = () => {
                   value={form.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className={`p-4 rounded-xl border-2 transition-all duration-200 resize-none ${
+                  rows={4}
+                  className={`p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all duration-200 resize-none ${
                     fieldErrors.message 
                       ? 'border-red-300 focus:border-red-500 focus:ring-red-200' 
                       : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-100'
                   }`}
                 />
                 {fieldErrors.message && (
-                  <p className="text-red-600 text-sm flex items-center gap-1">
-                    <XCircle className="w-4 h-4" />
+                  <p className="text-red-600 text-xs sm:text-sm flex items-center gap-1">
+                    <XCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                     {fieldErrors.message}
                   </p>
                 )}
@@ -444,30 +445,30 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-4 px-8 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 sm:py-4 px-6 sm:px-8 rounded-lg sm:rounded-xl font-semibold text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={loading}
               >
                 {loading ? (
                   <div className="flex items-center justify-center gap-2">
-                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
                     Placing Your Order...
                   </div>
                 ) : (
                   <div className="flex items-center justify-center gap-2">
-                    <Send className="w-5 h-5" />
+                    <Briefcase className="w-4 h-4 sm:w-5 sm:h-5" />
                     Place Your Order
                   </div>
                 )}
               </Button>
 
               {errorMessage && (
-                <div className="flex items-center gap-3 p-4 bg-red-50 border-2 border-red-200 rounded-xl">
-                  <XCircle className="w-6 h-6 text-red-500 flex-shrink-0" />
-                  <p className="text-red-700 font-medium">{errorMessage}</p>
+                <div className="flex items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-red-50 border-2 border-red-200 rounded-lg sm:rounded-xl">
+                  <XCircle className="w-5 h-5 sm:w-6 sm:h-6 text-red-500 flex-shrink-0" />
+                  <p className="text-xs sm:text-sm sm:text-base text-red-700 font-medium">{errorMessage}</p>
                 </div>
               )}
 
-              <div className="text-center text-sm text-gray-500">
+              <div className="text-center text-xs sm:text-sm text-gray-500">
                 By submitting this form, you agree to our privacy policy and terms of service.
               </div>
             </form>
@@ -481,21 +482,21 @@ const Contact = () => {
           aria-modal="true"
           role="dialog"
         >
-          <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 text-center space-y-6">
-            <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-              <CheckCircle2 className="w-8 h-8 text-green-600" />
+          <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl sm:shadow-2xl max-w-md w-full p-6 sm:p-8 text-center space-y-4 sm:space-y-6">
+            <div className="mx-auto w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center">
+              <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
             </div>
             
-            <div className="space-y-2">
-              <h2 className="text-2xl font-bold text-gray-900">Success!</h2>
-              <p className="text-gray-600">
+            <div className="space-y-1 sm:space-y-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Success!</h2>
+              <p className="text-sm sm:text-base text-gray-600">
                 Thank you for reaching out. We&apos;ve received your order and will get back to you within 2-4 hours.
               </p>
             </div>
             
             <Button
               onClick={closeModal}
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-xl font-semibold transition-colors"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl font-semibold transition-colors"
             >
               Close
             </Button>
