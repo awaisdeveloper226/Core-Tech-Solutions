@@ -60,7 +60,7 @@ export default function HeroSection() {
             </button>
             <button
               className="px-6 sm:px-8 py-3 text-blue-600 bg-white rounded-full shadow-lg border border-blue-600 hover:bg-blue-50 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              onClick={() => handleRedirect("/#automation-tools")}
+              onClick={() => handleRedirect("/services/automation")}
             >
               Explore Automation Tools
             </button>
