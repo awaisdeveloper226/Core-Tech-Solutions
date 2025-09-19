@@ -16,7 +16,7 @@ export default function Home() {
       <About /> {/* Build trust and introduce your company */}
       <Services /> {/* Showcase core services early on */}
       <WorkWithUs /> {/* Invite collaboration or partnership next */}
-      <BlogSection /> {/* Share useful content to educate and engage */}
+      {/* <BlogSection />  */}
       <Testimonials /> {/* Social proof — show client success stories */}
       <FAQ /> {/* Address common questions to reduce friction */}
       <CTA /> {/* Strong call-to-action for conversions */}

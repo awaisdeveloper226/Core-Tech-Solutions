@@ -4,26 +4,26 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Sarah Ahmed",
-    role: "CEO, Tech Innovators",
-    company: "Tech Innovators",
-    photo: "/testimonials/sarah.jpg",
+    name: "Ahmed Nawaz",
+    role: "CEO, FifthGen",
+    company: "FifthGen",
+    photo: "/images/man.jpg",
     feedback:
       "CoreTech Solutions transformed our outdated website into a sleek, modern platform. Their web development and SEO expertise significantly boosted our online presence and sales.",
   },
   {
-    name: "Omar Khan",
+    name: "Maria Ali",
     role: "Founder",
-    company: "AppSolutions",
-    photo: "/testimonials/omar.jpg",
+    company: "Scout",
+    photo: "/images/woman.jpg",
     feedback:
       "The team's app development and automation services helped us streamline our workflows and launch a highly intuitive mobile app. Communication was seamless throughout the project.",
   },
   {
-    name: "Ayesha Malik",
+    name: "Victor",
     role: "Marketing Head",
-    company: "BrightMarketing",
-    photo: "/testimonials/ayesha.jpg",
+    company: "Buckers Auction",
+    photo: "/images/man.jpg",
     feedback:
       "Thanks to CoreTech's SEO services, our organic traffic doubled within months. Their strategic approach and attention to detail are unmatched.",
   },
