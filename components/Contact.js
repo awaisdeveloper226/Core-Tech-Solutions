@@ -208,10 +208,10 @@ const Contact = () => {
                   <div>
                     <p className="text-xs sm:text-sm font-medium text-indigo-200">Email us</p>
                     <Link
-                      href="mailto:info@coretechsolutions.com"
+                      href="mailto:awais.web.developer124@gmail.com"
                       className="text-white font-semibold text-base sm:text-lg hover:text-indigo-200 transition-colors"
                     >
-                      info@coretechsolutions.com
+                      awais.web.developer124@gmail.com
                     </Link>
                   </div>
                 </div>
