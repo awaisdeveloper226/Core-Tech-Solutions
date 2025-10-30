@@ -211,7 +211,7 @@ const Contact = () => {
                       href="mailto:awais.web.developer124@gmail.com"
                       className="text-white font-semibold text-base sm:text-lg hover:text-indigo-200 transition-colors"
                     >
-                      awais.web.developer124@gmail.com
+                      contact@coretechsolutions.org
                     </Link>
                   </div>
                 </div>
