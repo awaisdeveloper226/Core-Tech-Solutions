@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -30,6 +31,15 @@ export default function RootLayout({ children }) {
         <Navbar/>
         {children}
         <Footer />
+
+        {/* Floating AI chat widget (bottom-right), on every page.
+            lazyOnload = loads after the page is interactive, so it never
+            competes with real page content for load time. */}
+        <Script
+          src="https://cdn.zanderio.ai/widget/loader.js"
+          data-id="wdg_yHf5WfCcN6CtUu8iwEJ8kajG"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
